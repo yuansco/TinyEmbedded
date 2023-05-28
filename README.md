@@ -59,11 +59,9 @@ Install necessary packages:
 sudo apt install wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev
 sudo apt install python3-distutils
 ```
-Download BSP:
+Download BSP (Buildroot-based BSPs in another [repository](https://github.com/yuansco/buildroot-f1c200s)):
 ``` shell
 git clone https://github.com/yuansco/buildroot-f1c200s.git
-cd buildroot-tiny200
-make f1c200s_dev_board_defconfig
 ```
 Apply defconfig and build image
 ``` shell
