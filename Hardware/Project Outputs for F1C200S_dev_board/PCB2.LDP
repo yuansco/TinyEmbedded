@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: G:\Z\my Maker project\F1C200S_dev_board_0311_remove_text_B_0424\PCB2.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=pcb2-roundholes.txt|DrillLayers=gtl,g2,g3,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=pcb2-slotholes.txt|DrillLayers=gtl,g2,g3,gbl
