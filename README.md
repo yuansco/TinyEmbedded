@@ -1,4 +1,4 @@
-# TinyEmbedded - F1C200s Embedded Linux Development board
+# TinyEmbedded - F1C200s Embedded Linux Development Board
 
 <img src="https://github.com/yuansco/TinyEmbedded/blob/master/Demo/01.Demo1.PNG" style="width:550px;"/>
 
@@ -22,13 +22,13 @@ The TinyEmbedded is a low-cost embedded Linux development board that features an
 
  * 16MB Serial NOR Flash.
 
- * AT24C02: A 2-kilobyte EEPROM.
+ * AT24C02: A 2KB EEPROM.
 
 After downloading the image to the SD card and starting the system, you can open the COM port via USB to view the boot logs of U-Boot and the Linux kernel. Once the system boots to the root filesystem, the OLED module will display 'Hi F1C200s'.
 
 <img src="https://github.com/yuansco/TinyEmbedded/blob/master/Demo/02.Demo2.PNG" style="width:550px;"/>
 
-### Hardware design
+### Hardware Design
 
 #### Block Diagram
 
@@ -38,19 +38,21 @@ After downloading the image to the SD card and starting the system, you can open
 
 <img src="https://github.com/yuansco/TinyEmbedded/blob/master/Document/02.Power_Tree.PNG" style="width:450px;"/>
 
-#### 3D view
+#### 3D View
 
 <img src="https://github.com/yuansco/TinyEmbedded/blob/master/Document/03.3D_view.PNG" style="width:450px;"/>
 
-#### Top view
+#### Top View
 
 <img src="https://github.com/yuansco/TinyEmbedded/blob/master/Document/04.TOP_view.PNG" style="width:450px;"/>
+
+#### Download
 
 Schematic: [PDF](https://github.com/yuansco/TinyEmbedded/blob/master/Document/TinyEmbedded_VerB.pdf)
 
 BOM: [CSV](https://github.com/yuansco/TinyEmbedded/blob/master/Document/BOM.CSV)
 
-Image: [IMG](https://github.com/yuansco/TinyEmbedded/blob/master/Image/sysimage-sdcard.img)
+Image: [IMG](https://github.com/yuansco/TinyEmbedded/blob/master/Images/sysimage-sdcard.img)
 
 ### Build an SD card image for booting
 
@@ -59,13 +61,13 @@ Install necessary packages:
 sudo apt install wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev
 sudo apt install python3-distutils
 ```
-Download BSP (Buildroot-based BSPs in another [repository](https://github.com/yuansco/buildroot-f1c200s)):
+Download BSP (Buildroot-based BSP in another [repository](https://github.com/yuansco/buildroot-f1c200s)):
 ``` shell
 git clone https://github.com/yuansco/buildroot-f1c200s.git
 ```
 Apply defconfig and build image
 ``` shell
 cd buildroot-tiny200
-make f1c200s_dev_board_defconfig
+make tinyembedded_defconfig
 make
 ```
